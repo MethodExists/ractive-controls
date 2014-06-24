@@ -1,19 +1,18 @@
 var connect         = require('connect'),
     serveStatic     = require('serve-static'),
     app             = connect(),
-    routes          = null,
     config          = {
-                        layout      : "./client/",
+                        layout      : "./client/layouts/",
                         templates   : "./client/ractive/templates/*.html",
                         pattern     : /\.html/gi,
                         replacement : "Template"
                       },
-    templateRender  = require("./lib/templateRender");
+    router  = require("./lib/router");
 
-var layout = templateRender.renderLayout(config, "index.html");
-console.log("========", layout);
+
+
 
 app.
   use( serveStatic('client') ).
-  // use(routes).
+  use( router.routes(config) ).
   listen(3000);

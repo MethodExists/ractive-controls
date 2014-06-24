@@ -23,6 +23,7 @@
   "homepage": "https://github.com/MethodExists/ractive-controls",
   "dependencies": {
     "connect": "^3.0.1",
+    "connect-route": "^0.1.4",
     "glob": "^4.0.2",
     "handlebars": "^2.0.0-alpha.4",
     "serve-static": "^1.2.3"
