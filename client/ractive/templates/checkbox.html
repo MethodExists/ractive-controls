@@ -1,0 +1,8 @@
+{{#editable}}
+<span class="checkbox {{#value}}checked{{/value}} {{class}}" on-click="toggleval">
+  <i class="fa fa-check"></i>
+</span>
+{{/editable}}
+{{^editable}}
+  {{formattedValue}}
+{{/editable}}

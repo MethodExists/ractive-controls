@@ -1,0 +1,16 @@
+<h3>Checkbox</h3>
+{{#checkboxes}}
+  <p>
+    <checkbox
+      value="{{value}}"
+      editable="{{editable}}"
+     />
+    {{^editable}}Locked{{/}}
+    {{#editable}}
+      Editable
+      ||
+      {{#value}} Checked {{/}}
+      {{^value}} Unchecked {{/}}
+    {{/}}
+  </p>
+{{/checkboxes}}

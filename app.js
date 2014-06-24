@@ -3,14 +3,14 @@ var connect         = require('connect'),
     app             = connect(),
     config          = {
                         layout      : "./client/layouts/",
-                        templates   : "./client/ractive/templates/*.html",
+                        templates   : [
+                                        "./client/ractive/templates/*.html",
+                                        "./client/templates/*.html"
+                                      ],
                         pattern     : /\.html/gi,
                         replacement : "Template"
                       },
     router  = require("./lib/router");
-
-
-
 
 app.
   use( serveStatic('client') ).
